@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Caller ID Search</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<header>
+<a href="/"><img class="logo" src="logo.svg" alt="Logo"></a>
+<nav>
+<ul class="nav_links">
+<li><a href="/">Home</a></li>
+</ul>
+</nav>
+
+</header>
+
+  <div class="formlol" style="margin-top:2rem;">
+    <center>
+        <label for="month" style="color:white;">Phone number:</label><br>
+        <input type="text" id="phonenum" name="phonenum" placeholder="+15555555555"><br>
+        
+        <input type="submit" style="background-color:#0088a9;color:white; padding:.85em;border-radius:4px;" onclick="AddValue()" id="btnSubmit" value="Submit">
+    </center>
+  </div>
+    
+  
+<script>
+function AddValue() {
+        var num = document.getElementById('phonenum').value;
+        
+        console.log(num);
+        
+        
+        sessionStorage.setItem('phonenum', num);
+        
+
+        window.location.href = "/results.html";
+</script>
+
+
+
+  
+</body>
+
+</html>
